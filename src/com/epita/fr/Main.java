@@ -1,8 +1,11 @@
 package com.epita.fr;
 
-import com.epita.fr.Circle.Circle;
-import com.epita.fr.Square.Square;
-import com.epita.fr.Triangle.Triangle;
+import com.epita.fr.classes.Circles;
+import com.epita.fr.classes.Squares;
+import com.epita.fr.classes.Triangles;
+import com.epita.fr.services.Circle.Circle;
+import com.epita.fr.services.Square.Square;
+import com.epita.fr.services.Triangle.Triangle;
 
 public class Main {
 
@@ -12,19 +15,22 @@ public class Main {
         System.out.println("--- ***: Triangle Calculations Here :*** --- ");
 
         Triangle triangle = new Triangle();
-        triangle.areaTriangle();
-        triangle.perimeterTriangle();
+        Triangles triangles = new Triangles();
+        triangle.areaTriangle(triangles);
+        triangle.perimeterTriangle(triangles);
 
         System.out.println("--- ***: Square Calculations Here :*** --- ");
 
         Square square = new Square();
-        square.areaSquare();
-        square.perimeterSquare();
+        Squares squares = new Squares();
+        square.areaSquare(squares);
+        square.perimeterSquare(squares);
 
         System.out.println("--- ***: Circle Calculations Here :*** --- ");
 
         Circle circle = new Circle();
-        circle.areaOfCircle();
-        circle.perimterOfCircle();
+        Circles circles = new Circles();
+        circle.areaOfCircle(circles);
+        circle.perimterOfCircle(circles);
     }
 }
